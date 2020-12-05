@@ -1,14 +1,11 @@
 import 'package:flutter/material.dart';
 
-
-class  HomePage extends StatefulWidget {
+class HomePage extends StatefulWidget {
   @override
   _HomePageState createState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomePage> {
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,8 +15,53 @@ class _HomePageState extends State<HomePage> {
       ),
       body: Padding(
         padding: const EdgeInsets.all(10.0),
-        child: Text('Ali Haider'),
-
+        child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              Row(
+                children: [
+                  Expanded(
+                    child: Padding(
+                      padding: EdgeInsets.all(15.0),
+                      child: FlatButton(
+                        textColor: Colors.white,
+                        color: Colors.green,
+                        child: Text(
+                          'Simple',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20.0,
+                          ),
+                        ),
+                        onPressed: () {
+                          debugPrint('simple');
+                        },
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    child: Padding(
+                      padding: EdgeInsets.all(15.0),
+                      child: FlatButton(
+                        textColor: Colors.white,
+                        color: Colors.blue,
+                        child: Text(
+                          'Hard',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20.0,
+                          ),
+                        ),
+                        onPressed: () {
+                          debugPrint('hard');
+                        },
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ]),
       ),
       drawer: Drawer(
         child: ListView(
@@ -29,11 +71,7 @@ class _HomePageState extends State<HomePage> {
                 accountName: Text('Ali Haider'),
                 accountEmail: Text('alisart009@gmail.com'),
                 currentAccountPicture: CircleAvatar(
-
-                    backgroundImage: AssetImage('assets/dp.jpg')
-
-                )
-            ),
+                    backgroundImage: AssetImage('assets/dp.jpg'))),
             ListTile(
               leading: Icon(Icons.person),
               title: Text('Account'),
@@ -42,7 +80,7 @@ class _HomePageState extends State<HomePage> {
             ),
             ListTile(
               leading: Icon(Icons.phone_android),
-              title: Text('Phone'),
+              title: Text('Moblie'),
               subtitle: Text('03047814001'),
               trailing: Icon(Icons.edit),
             ),
@@ -55,7 +93,6 @@ class _HomePageState extends State<HomePage> {
           ],
         ),
       ),
-
     );
   }
 }
