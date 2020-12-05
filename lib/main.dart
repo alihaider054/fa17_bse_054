@@ -11,7 +11,7 @@ class Home extends StatelessWidget {
       title: 'Dice App',
       home: HomePage(),
       theme: ThemeData(
-          primarySwatch: Colors.yellow
+          primarySwatch: Colors.red
       ),
 
     );
