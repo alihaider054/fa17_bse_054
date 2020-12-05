@@ -71,7 +71,7 @@ class _HomePageState extends State<HomePage> {
                 accountName: Text('Ali Haider'),
                 accountEmail: Text('alisart009@gmail.com'),
                 currentAccountPicture: CircleAvatar(
-                    backgroundImage: AssetImage('assets/dp.jpg'))),
+                    backgroundImage: AssetImage('assets/profiles.jpg'))),
             ListTile(
               leading: Icon(Icons.person),
               title: Text('Account'),
